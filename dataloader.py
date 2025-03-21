@@ -1,12 +1,15 @@
 import torch
 from torch.utils.data import Dataset, DataLoader, Subset
-from bagz import BagDataSource
-from config import data_config
 from apache_beam import coders
-import utils
 import numpy as np
-import tokenizer
 import abc
+
+
+from chessbot_byte.configs import data_config
+from chessbot_byte.bagz import BagDataSource
+import chessbot_byte.tokenizer as tokenizer
+import chessbot_byte.utils as utils
+
 
 dataloader_instance = None  # This will hold the created DataLoader instance
 
